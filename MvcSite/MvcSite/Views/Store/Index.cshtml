@@ -1,0 +1,19 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+@model IEnumerable<MvcSite.Models.God>
+<ul>
+    @foreach (God god in Model)
+    {
+        <li>@god.Name</li>
+        <li>@ViewBag.GetType()</li>
+    }
+</ul>
+
+@{
+    //string message = "<h1>哈哈哈</h1>";
+    string message = "<script>alert('1232132131')</script>";
+}
+<span>@Html.Raw(message)</span>
